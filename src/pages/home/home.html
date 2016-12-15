@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      MangaTwo - <button ion-button (click)="About();">
+  About
+ </button>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Mangas</h2>
+
+
+  <ion-list>
+    <ion-item *ngFor="let manga of mangas"
+              (click)="detailsPage(manga.code);" detail-push>
+      {{manga.name}}  {{manga.sinopse}}
+    </ion-item>
+  </ion-list>
+
+
+
+</ion-content>
